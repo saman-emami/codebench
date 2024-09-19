@@ -31,7 +31,7 @@ type EditorRefType = Parameters<OnMount>[0];
 export default function CodeEditor() {
 	const [code, setCode] = useState<CodeInput>(defaultCode);
 	const [codeActiveTab, setCodeActiveTab] = useState<ProgrammingLanguage>("html");
-	const [consoleOutput, setConsoleOutput] = useState<string[]>([]); //
+	// const [consoleOutput, setConsoleOutput] = useState<string[]>([]);
 	const isLargeScreen = useMediaQuery("(min-width: 1024px)");
 	const editorRef = useRef<EditorRefType | null>(null);
 	const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -94,7 +94,7 @@ export default function CodeEditor() {
     </html>
   `;
 
-	useEffect(() => {
+	/* 	useEffect(() => {
 		const handleMessage = (event: MessageEvent) => {
 			if (event.data.type === "console") {
 				setConsoleOutput((prev) => [...prev, `${event.data.method}: ${event.data.args.join(" ")}`]);
@@ -103,7 +103,7 @@ export default function CodeEditor() {
 
 		window.addEventListener("message", handleMessage);
 		return () => window.removeEventListener("message", handleMessage);
-	}, []);
+	}, []); */
 
 	useEffect(() => {
 		if (iframeRef.current) {
