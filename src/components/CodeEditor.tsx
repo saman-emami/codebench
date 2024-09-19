@@ -169,7 +169,7 @@ export default function CodeEditor() {
 										<Play className="size-4" />
 									</Button>
 								</DrawerTrigger>
-								<DrawerContent className="h-[90vh]">
+								<DrawerContent className="h-[80vh]">
 									<DrawerTitle className="hidden">Previes</DrawerTitle>
 									<PreviewPanel />
 								</DrawerContent>
