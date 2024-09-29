@@ -15,7 +15,9 @@ export default function RootLayout({
 	return (
 		<>
 			<html lang="en" suppressHydrationWarning>
-				<head />
+				<head>
+					<link rel="icon" href="/favicon.png" sizes="any" />
+				</head>
 				<body className="bg-background">
 					<ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
 						{children}
